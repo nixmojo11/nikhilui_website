@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>NikhilHNair Designs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -10,12 +11,18 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div>
-                <img src="Portfolio-website_Images/Logo_1.png" alt="Nikhil H Nair UI and Web Designer">
-                 <nav>
+                <img class="logo" src="Portfolio-website_Images/Logo_1.png" alt="Nikhil H Nair UI and Web Designer">
+                 <div class="navtoggle" id="myNavtoggle">
+                <nav>
                      <ul>
                      <li><a href="index.html">HOME</a></li>
                      <li><a href="About.html">ABOUT</a></li>
@@ -24,62 +31,115 @@
                      <li><a href="#CONTACT">CONTACT</a></li>
                     </ul>
                  </nav>
+                </div>
             </div>
         </header>
         <main>
-            <div>
-                <img src="Portfolio-website_Images/Logo_symbol_1.png" alt="Logo">
-                <img src="Portfolio-website_Images/Star_big.png">
-                <img src="Portfolio-website_Images/Star_small.png">
-                <img src="Portfolio-website_Images/circles_24.png">
-                <img src="Portfolio-website_Images/circles_24.png">
-                <h1>Hey! I'm Nikhil. I use design tools and magic to create the best user interaction and experience across all platforms and devices. </h1>
-                <h2>From wherever you operate, I am open to working remotely.</h2>
-                <h1>UI & UX</h1>
-                <h3>I worked on</h3>
-                <a href="#PROJECTS">EXPLORE</a>
-                <img src="Portfolio-website_Images/homepage_mockups.png">
-                <img src="Portfolio-website_Images/Magic_air.png">
-                <img src="Portfolio-website_Images/circles_24.png">
-                <img src="Portfolio-website_Images/circles_19.png">
-                <img src="Portfolio-website_Images/circles_19.png">
-                <img src="Portfolio-website_Images/Star_big.png">
-                <img src="Portfolio-website_Images/Star_big.png">
-                <img src="Portfolio-website_Images/Star_small.png">
-                <img src="Portfolio-website_Images/Star_small.png">
-                <p>"For me, there is very little difference between magic and art. To me, the ultimate act of magic is to create something from nothing" - Alan Moore</p>
+            <div class="row"><!--open row that hold (3) columns for elements-->
+                <div><!--open first column-->
+                <img class="left_column" src="Portfolio-website_Images/circles_24.png">
+                <img class="left_column_star" src="Portfolio-website_Images/Star_big.png">
+            </div><!--end first column-->
+            <div><!--open second column-->
+                <img class="center_column" src="Portfolio-website_Images/Logo_symbol_1.png" alt="Logo">
+            </div><!--end second column-->
+            <div><!--open third column-->
+                <img class="star" src="Portfolio-website_Images/Star_small.png">
+                <img class="right_column" src="Portfolio-website_Images/circles_24.png">
+            </div><!--end third column-->
+            </div><!--end row that hold (3) columns for elements-->
+
+            <div class="hero">
+                <h2 style="padding-top: 0px; margin-top: 0px; margin-bottom: 0px;">Hey! I'm Nikhil</h2>
+                   <p style="margin-top: 10px;">I use design tools and magic to create the best user interaction and experience across all platforms and devices. </p> 
+                   <img class="pstar_2" src="Portfolio-website_Images/Star_big.png">
+                   <img class="pstar_4" src="Portfolio-website_Images/Star_small.png">
+                <h6 style="color: #586469;margin-top: 15px; margin-bottom: 5px;">From wherever you operate, I am open to working remotely.</h6>
+                <img class="pstar_1" src="Portfolio-website_Images/Star_big.png">
+                </div>
+
+            <div class="container"><!--open row with (2) columns-->
+                    <div class="explore"><!--open first column-->
+                        <h1 style="padding-bottom: 0px; margin-bottom: 0px;">UI & UX</h1>
+                        <h3 style="color: 586469;margin-top: 5px; padding-top: 5px;">I worked on</h3>
+                        <a class="button" href="#PROJECTS">EXPLORE</a>
+                    </div><!--end first column-->
+                    <div> <!--open second column-->
+                        <img class="mockup_f" src="Portfolio-website_Images/mockup_f.png" max-width="420px" height="auto">
+                    </div><!--end second column-->
+             </div><!--end row with (2) columns-->
+            
+            <div class="quote">
+                <img class="pstar_3" src="Portfolio-website_Images/Star_small.png">
+                <p style="font-family: 'poppins', sans-serif; font-size: 1.45em; color: #586469;">"For me, there is very little difference between magic and art. To me, the ultimate act of magic is to create something from nothing" - Alan Moore</p>
+            </div>
+
+            <div class="blink"><!--open a row that hold (3) columns for magic-->
+                <div><!--open first column-->
+                <img class="magicstar_1" src="Portfolio-website_Images/Magic_star.png">
+                </div><!--end first column-->
+                <div><!--open second column-->
+                 <img class="magicstar_2" src="Portfolio-website_Images/Magic_star.png">
+                </div><!--end second column-->
+                <div><!--open third column-->
+                <img class="magicstar_3" src="Portfolio-website_Images/Magic_star.png">
+                </div><!--end third column-->
+            </div><!--end a row that hold (3) columns for magic-->
+
+            <div><!--open a row that hold (2) columns for magic-->
+                <div class="blink" ><!--open first column-->
+                <img class="magicstar_4" src="Portfolio-website_Images/Magic_star.png">
+                </div><!--end first column-->
+                <div class="magicgif"><!--open second column-->
                 <img src="Portfolio-website_Images/Magic_ui.gif">
+                </div><!--end second column-->
+            </div><!--end a row that hold (2) columns for magic-->
+
+            <div class="wand">
                 <img src="Portfolio-website_Images/Wand.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
-                <img src="Portfolio-website_Images/Magic_star.png">
+            </div>
+            
+            <div class="blink"><!--open a row that hold (3) columns for magic-->
+                <div><!--open first column-->
+                <img class="magicstar_1" src="Portfolio-website_Images/Magic_star.png">
+                </div><!--end first column-->
+                <div><!--open second column-->
+                 <img class="magicstar_2" src="Portfolio-website_Images/Magic_star.png">
+                </div><!--end second column-->
+                <div><!--open third column-->
+                <img class="magicstar_3" src="Portfolio-website_Images/Magic_star.png">
+                </div><!--end third column-->
+            </div><!--end a row that hold (3) columns for magic-->
+
+           
+            
+
+            <div class="projects">
                 <div id="index.html/"#PROJECTS>
                 <div id="PROJECTS">
-                <h1>PROJECTS</h1>
-                <h2>Here's Some Of My UI UX Wizardry</h2>
+                <h2>PROJECTS</h2>
+                <h3>Here's Some Of My UI UX Wizardry</h3>
                 </div>
             </div>
                 <div><!--open row that holds (2) columns for project -->
+                    <span class="recipe">
                     <div><!--open first column (used for image)-->
                         <picture>
                             <source srcset="Portfolio-website_Images/Fettlerelish_cover" media="(max-width:767px)">
-                            <img src="Portfolio-website_Images/Fettlerelish_cover.png" alt="Fettle Relish Recipe App">
+                            <img class="recipeimage" src="Portfolio-website_Images/Fettlerelish_cover.png" alt="Fettle Relish Recipe App">
                         </picture>
                     </div><!--end first column-->
-                    <div><!--open second column (used for text)-->
+                    <div class="recipeinfo"><!--open second column (used for text)-->
                         <h3>Fettle Relish</h3><!--heading for the project-->
+                        <h4>A UI UX Case Study of Recipe App</h4>
                         <p><!--open paragraph-->
                             'Healthy' and 'Clean' meals are often considered boring, bland, complicated to make and tasteless. Fettle Relish app proves including a healthy diet in one's lifestyle isn't bland or complicated, but it's just the opposite! A Recipe app that would manage your daily meals and help you advance towards your health targets. Accessible and Responsive app so that you can plan your meals from anywhere at any time.
                         </p><!--end paragraph-->
-                        <a href="FettleRelish.html">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" href="FettleRelish.html">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
+                </span>
                     </div><!--end row that holds (2) columns for project-->
+
                 <div><!--open row that holds (2) columns for project -->
                     <div><!--open first column (used for image)-->
                         <picture>
@@ -89,10 +149,11 @@
                     </div><!--end first column-->
                     <div><!--open second column (used for text)-->
                         <h3>TrailHigh</h3><!--heading for the project-->
+                        <h4>A UX UI Case Study </h4>
                         <p><!--open paragraph-->
                             Travel into the wilderness of nature, explore your favourite destination and fulfil your wanderlust without having to pay any travel agencies or requiring any travel guides. All of which is possible through this app. A native app that serves all Android and iOS users.
                         </p><!--end paragraph-->
-                        <a href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
                 <div><!--open row that holds (2) columns for project -->
@@ -108,7 +169,7 @@
                             Going to the nearest furniture studio to get the best and perfect furniture that raises the elegance of your home is a tiring procedure. The pain increases tenfolds when you get to know of the scanty collections the studio offers.
                             This is where the Furnest online shopping app helps you get the ideal furniture that completes your dream home decor.
                         </p><!--end paragraph-->
-                        <a href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
                 <div><!--open row that holds (2) columns for project -->
@@ -123,7 +184,7 @@
                         <p><!--open paragraph-->
                             Being productive is a sustainable skill that only sharpens more when one adopts it early. Prolific Productivity App is a mobile version of a productivity app that helps youngsters between 16 to 24 years old develop this skill in their formative years. Managing curricular activities, co-curricular activities, preparing for exams and planning your weekly submissions, everything is possible with this app! 
                         </p><!--end paragraph-->
-                        <a href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
                 <div><!--open row that holds (2) columns for project -->
@@ -138,7 +199,7 @@
                         <p><!--open paragraph-->
                             Within a narrow time constraint, a minimalistic yet useful note-taking app was built. This app was my first speedy challenge completed within 9 hours.
                         </p><!--end paragraph-->
-                        <a href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
                 <div><!--open row that holds (2) columns for project -->
@@ -153,15 +214,29 @@
                         <p><!--open paragraph-->
                             A UI exploration of Messaging App Concept. Delve into the new and stylish way of connecting with people. 
                         </p><!--end paragraph-->
-                        <a href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
-                <h1>PAINTINGS</h1>
+                </div>
+
+                <h2>PAINTINGS</h2>
+                <div><!--open row that hold (2) columns-->
+                <div class="elephant"><!--open first column-->
                 <img src="Portfolio-website_Images/Paintings/Kerala_elephant.jpg" alt="Kerala Temple Elephant">
+            </div><!--end first column-->
+            <div class="turtle"><!--open second column-->
                 <img src="Portfolio-website_Images/Paintings/Turtle.jpg" alt="Sea Turtle">
-                <a href="Paintings.html">EXPLORE</a>
+            </div ><!--end second column-->
+            </div><!--end row that hold (2) columns-->
+
+            <div class="paintbutton">
+                <a class="button" href="Paintings.html">EXPLORE</a>
+            </div>
+
             </div>
         </main>
+
+        
             <footer id="CONTACT">
                 <div class="container">
                     <p><!--open paragraph-->
@@ -169,7 +244,7 @@
                     </p><!--end paragraph-->
                     <h2>This is where Magic happens!</h2>
                     <div class="cta">
-                        <a href="mailto:nikhilnairdesigns@gmail.com" class="--button CONTACT">SEND A MESSAGE</a>
+                        <a class="button" href="mailto:nikhilnairdesigns@gmail.com" class="--button CONTACT">SEND A MESSAGE</a>
                     </div>
                     <div class="social">
                         <ul>

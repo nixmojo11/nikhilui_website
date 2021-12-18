@@ -19,7 +19,7 @@
     </head>
     <body>
         <header>
-            <div>
+            <div class="container">
                 <img class="logo" src="Portfolio-website_Images/Logo_1.png" alt="Nikhil H Nair UI and Web Designer">
                  <div class="navtoggle" id="myNavtoggle">
                 <nav>
@@ -35,17 +35,18 @@
             </div>
         </header>
         <main>
-            <div class="row"><!--open row that hold (3) columns for elements-->
-                <div><!--open first column-->
+            <div class="main-container">
+            <div class="wrapper-3"><!--open row that hold (3) columns for elements-->
+                <div class><!--open first column-->
                 <img class="left_column" src="Portfolio-website_Images/circles_24.png">
-                <img class="left_column_star" src="Portfolio-website_Images/Star_big.png">
+                <img style="width: 60%;" src="Portfolio-website_Images/Star_big.png">
             </div><!--end first column-->
-            <div><!--open second column-->
+            <div class><!--open second column-->
                 <img class="center_column" src="Portfolio-website_Images/Logo_symbol_1.png" alt="Logo">
             </div><!--end second column-->
-            <div><!--open third column-->
-                <img class="star" src="Portfolio-website_Images/Star_small.png">
-                <img class="right_column" src="Portfolio-website_Images/circles_24.png">
+            <div class><!--open third column-->
+                <img style="width: 30%; margin-top: 210px; margin-left: 30px;" src="Portfolio-website_Images/Star_small.png">
+                <img style="width: 80%;" src="Portfolio-website_Images/circles_24.png">
             </div><!--end third column-->
             </div><!--end row that hold (3) columns for elements-->
 
@@ -53,23 +54,23 @@
                 <h2 style="padding-top: 0px; margin-top: 0px; margin-bottom: 0px;">Hey! I'm Nikhil</h2>
                    <p style="margin-top: 10px;">I use design tools and magic to create the best user interaction and experience across all platforms and devices. </p> 
                    <img class="pstar_2" src="Portfolio-website_Images/Star_big.png">
-                   <img class="pstar_4" src="Portfolio-website_Images/Star_small.png">
-                <h6 style="color: #586469;margin-top: 15px; margin-bottom: 5px;">From wherever you operate, I am open to working remotely.</h6>
+                <h6 style="color: #586469;margin-top: 35px; margin-bottom: 25px; margin-left: auto; margin-right: auto; text-align: center;padding-left: 100px;">From wherever you operate, I am open to working remotely.</h6>
                 <img class="pstar_1" src="Portfolio-website_Images/Star_big.png">
                 </div>
 
-            <div class="container"><!--open row with (2) columns-->
+            <div class="wrapper-2"><!--open row with (2) columns-->
                     <div class="explore"><!--open first column-->
                         <h1 style="padding-bottom: 0px; margin-bottom: 0px;">UI & UX</h1>
                         <h3 style="color: 586469;margin-top: 5px; padding-top: 5px;">I worked on</h3>
                         <a class="button" href="#PROJECTS">EXPLORE</a>
                     </div><!--end first column-->
                     <div> <!--open second column-->
-                        <img class="mockup_f" src="Portfolio-website_Images/mockup_f.png" max-width="420px" height="auto">
+                        <img class="mockup_f" src="Portfolio-website_Images/mockup_f4.png">
                     </div><!--end second column-->
              </div><!--end row with (2) columns-->
             
             <div class="quote">
+                <img class="pstar_4" style="border-bottom: 5px;" src="Portfolio-website_Images/Star_small.png">
                 <img class="pstar_3" src="Portfolio-website_Images/Star_small.png">
                 <p style="font-family: 'poppins', sans-serif; font-size: 1.45em; color: #586469;">"For me, there is very little difference between magic and art. To me, the ultimate act of magic is to create something from nothing" - Alan Moore</p>
             </div>
@@ -88,7 +89,7 @@
 
             <div><!--open a row that hold (2) columns for magic-->
                 <div class="blink" ><!--open first column-->
-                <img class="magicstar_4" src="Portfolio-website_Images/Magic_star.png">
+                <img style="width: 10%; padding-top: 10px; position: relative; left: 0px;" src="Portfolio-website_Images/Magic_star.png">
                 </div><!--end first column-->
                 <div class="magicgif"><!--open second column-->
                 <img src="Portfolio-website_Images/Magic_ui.gif">
@@ -118,11 +119,10 @@
                 <div id="index.html/"#PROJECTS>
                 <div id="PROJECTS">
                 <h2>PROJECTS</h2>
-                <h3>Here's Some Of My UI UX Wizardry</h3>
+                <h3 style="border-bottom: 80px; padding-bottom: 80px;" >Here's Some Of My UI UX Wizardry</h3>
                 </div>
             </div>
-                <div><!--open row that holds (2) columns for project -->
-                    <span class="recipe">
+                <div class="recipe" ><!--open row that holds (2) columns for project -->
                     <div><!--open first column (used for image)-->
                         <picture>
                             <source srcset="Portfolio-website_Images/Fettlerelish_cover" media="(max-width:767px)">
@@ -130,97 +130,104 @@
                         </picture>
                     </div><!--end first column-->
                     <div class="recipeinfo"><!--open second column (used for text)-->
-                        <h3>Fettle Relish</h3><!--heading for the project-->
-                        <h4>A UI UX Case Study of Recipe App</h4>
-                        <p><!--open paragraph-->
+                        <h3 style="margin-top: 0px; margin-bottom: 0px;" >Fettle Relish</h3><!--heading for the project-->
+                        <h4 style="border-top: 15px; border-bottom: 0px;" >A UI UX Case Study of Recipe App</h4>
+                        <p style="padding-bottom: 15px; text-align: left;"><!--open paragraph-->
                             'Healthy' and 'Clean' meals are often considered boring, bland, complicated to make and tasteless. Fettle Relish app proves including a healthy diet in one's lifestyle isn't bland or complicated, but it's just the opposite! A Recipe app that would manage your daily meals and help you advance towards your health targets. Accessible and Responsive app so that you can plan your meals from anywhere at any time.
                         </p><!--end paragraph-->
-                        <a class="button" href="FettleRelish.html">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" style="color: #425058; background-color: #FFFFFF;" href="FettleRelish.html">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
-                </span>
                     </div><!--end row that holds (2) columns for project-->
 
-                <div><!--open row that holds (2) columns for project -->
+                <div class="trail" ><!--open row that holds (2) columns for project -->
                     <div><!--open first column (used for image)-->
                         <picture>
                             <source srcset="Portfolio-website_Images/Trailhigh_cover" media="(max-width:767px)">
-                            <img src="Portfolio-website_Images/Trailhigh_cover 11.53.05 AM (1).png" alt="TrailHigh Trekking App">
+                            <img class="trailimage" src="Portfolio-website_Images/Trailhigh_cover 11.53.05 AM (1).png" alt="TrailHigh Trekking App">
                         </picture>
                     </div><!--end first column-->
-                    <div><!--open second column (used for text)-->
-                        <h3>TrailHigh</h3><!--heading for the project-->
-                        <h4>A UX UI Case Study </h4>
-                        <p><!--open paragraph-->
+                    <div class="trailinfo" ><!--open second column (used for text)-->
+                        <h3 style="margin-top: 0px; margin-bottom: 0px;" >TrailHigh</h3><!--heading for the project-->
+                        <h4 style="border-bottom: 0px; padding-bottom: 0px;" >UX UI Design </h4>
+                        <p style="padding: 20px; padding-top: 0px; text-align: left;" ><!--open paragraph-->
                             Travel into the wilderness of nature, explore your favourite destination and fulfil your wanderlust without having to pay any travel agencies or requiring any travel guides. All of which is possible through this app. A native app that serves all Android and iOS users.
                         </p><!--end paragraph-->
-                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" style="color: #425058; background-color: #FFFFFF;" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
-                <div><!--open row that holds (2) columns for project -->
+
+                <div class="furnest" ><!--open row that holds (2) columns for project -->
                     <div><!--open first column (used for image)-->
                         <picture>
                             <source srcset="Portfolio-website_Images/Furnest_cover" media="(max-width:767px)">
-                            <img src="Portfolio-website_Images/Furnest_cover.png" alt="Furnest Furniture Online Shopping App">
+                            <img class="furnestimage" src="Portfolio-website_Images/Furnest_cover.png" alt="Furnest Furniture Online Shopping App">
                         </picture>
                     </div><!--end first column-->
-                    <div><!--open second column (used for text)-->
-                        <h3>Furnest</h3><!--heading for the project-->
-                        <p><!--open paragraph-->
+                    <div class="furnestinfo" ><!--open second column (used for text)-->
+                        <h3 style="margin-top: 0px;margin-bottom: 0px;" >Furnest</h3><!--heading for the project-->
+                        <h4 style="border-bottom: 0px; padding-bottom: 0px;" >UX UI Design </h4>
+                        <p style="padding: 20px; padding-top: 0px; text-align: left;" ><!--open paragraph-->
                             Going to the nearest furniture studio to get the best and perfect furniture that raises the elegance of your home is a tiring procedure. The pain increases tenfolds when you get to know of the scanty collections the studio offers.
                             This is where the Furnest online shopping app helps you get the ideal furniture that completes your dream home decor.
                         </p><!--end paragraph-->
-                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" style="color: #425058; background-color: #FFFFFF;" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
-                <div><!--open row that holds (2) columns for project -->
+
+                <div class="prolific" ><!--open row that holds (2) columns for project -->
                     <div><!--open first column (used for image)-->
                         <picture>
                             <source srcset="Portfolio-website_Images/Prolific_cover" media="(max-width:767px)">
-                            <img src="Portfolio-website_Images/Prolific_cover.png" alt="Prolific Productivity App">
+                            <img class="prolificimage" src="Portfolio-website_Images/Prolific_cover.png" alt="Prolific Productivity App">
                         </picture>
                     </div><!--end first column-->
-                    <div><!--open second column (used for text)-->
-                        <h3>Prolific</h3><!--heading for the project-->
-                        <p><!--open paragraph-->
+                    <div class="prolificinfo" ><!--open second column (used for text)-->
+                        <h3 style="margin-top: 0px;" >Prolific</h3><!--heading for the project-->
+                        <h4 style="border-bottom: 0px; padding-bottom: 0px;" > UI Exploration </h4>
+                        <p style="padding: 20px; padding-top: 0px; text-align: left;"><!--open paragraph-->
                             Being productive is a sustainable skill that only sharpens more when one adopts it early. Prolific Productivity App is a mobile version of a productivity app that helps youngsters between 16 to 24 years old develop this skill in their formative years. Managing curricular activities, co-curricular activities, preparing for exams and planning your weekly submissions, everything is possible with this app! 
                         </p><!--end paragraph-->
-                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" style="color: #425058; background-color: #FFFFFF;" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
-                <div><!--open row that holds (2) columns for project -->
+
+                <div class="note" ><!--open row that holds (2) columns for project -->
                     <div><!--open first column (used for image)-->
                         <picture>
                             <source srcset="Portfolio-website_Images/Jotitdown_cover" media="(max-width:767px)">
-                            <img src="Portfolio-website_Images/Jotitdown_cover.png" alt="JotItDown Note-taking App">
+                            <img class="noteimage" src="Portfolio-website_Images/Jotitdown_cover.png" alt="JotItDown Note-taking App">
                         </picture>
                     </div><!--end first column-->
-                    <div><!--open second column (used for text)-->
-                        <h3>Jot It Down</h3><!--heading for the project-->
-                        <p><!--open paragraph-->
+                    <div class="noteinfo" ><!--open second column (used for text)-->
+                        <h3 style="margin-top: 10px;"  >Jot It Down</h3><!--heading for the project-->
+                        <h4 style="border-bottom: 0px; padding-bottom: 0px;" > UI Challenge </h4>
+                        <p style="padding: 20px; padding-top: 5px; text-align: left;" ><!--open paragraph-->
                             Within a narrow time constraint, a minimalistic yet useful note-taking app was built. This app was my first speedy challenge completed within 9 hours.
                         </p><!--end paragraph-->
-                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" style="color: #425058; background-color: #FFFFFF;" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
-                <div><!--open row that holds (2) columns for project -->
+
+                <div class="chatbox" ><!--open row that holds (2) columns for project -->
                     <div><!--open first column (used for image)-->
                         <picture>
                             <source srcset="Portfolio-website_Images/Kibbbitz_cover" media="(max-width:767px)">
-                            <img src="Portfolio-website_Images/Kibbbitz_cover.png" alt="JotItDown Note-taking App">
+                            <img class="chatboximage" src="Portfolio-website_Images/Kibbbitz_cover.png" alt="JotItDown Note-taking App">
                         </picture>
                     </div><!--end first column-->
-                    <div><!--open second column (used for text)-->
-                        <h3>Kibbbitz</h3><!--heading for the project-->
-                        <p><!--open paragraph-->
+                    <div class="chatboxinfo" ><!--open second column (used for text)-->
+                        <h3 style="margin-top: 10px;" >Kibbbitz</h3><!--heading for the project-->
+                        <h4 style="border-bottom: 0px; padding-bottom: 0px;" > UI Exploration </h4>
+                        <p style="padding: 20px; padding-top: 5px; text-align: left;"  ><!--open paragraph-->
                             A UI exploration of Messaging App Concept. Delve into the new and stylish way of connecting with people. 
                         </p><!--end paragraph-->
-                        <a class="button" href="#">SHOW MORE</a><!--button or link lable-->
+                        <a class="button" style="color: #425058; background-color: #FFFFFF;" href="#">SHOW MORE</a><!--button or link lable-->
                     </div><!--end second column-->
                     </div><!--end row that holds (2) columns for project-->
                 </div>
 
-                <h2>PAINTINGS</h2>
-                <div><!--open row that hold (2) columns-->
+                <h2 class="painting" >PAINTINGS</h2>
+                <div class="paint-wrapper" ><!--open row that hold (2) columns-->
                 <div class="elephant"><!--open first column-->
                 <img src="Portfolio-website_Images/Paintings/Kerala_elephant.jpg" alt="Kerala Temple Elephant">
             </div><!--end first column-->
@@ -230,30 +237,28 @@
             </div><!--end row that hold (2) columns-->
 
             <div class="paintbutton">
-                <a class="button" href="Paintings.html">EXPLORE</a>
+                <a class="button" style="margin-left: auto; margin-right: auto; align-items: center;" href="Paintings.html">EXPLORE</a>
             </div>
 
-            </div>
+        </div>
         </main>
 
         
             <footer id="CONTACT">
-                <div class="container">
-                    <p><!--open paragraph-->
+                <div class="footer-container">
+                    <h4 style="color: #586469;margin-top: 100px; margin-left: 40px; margin-right: 40px;"><!--open paragraph-->
                         Planning a new venture, wish to upgrade/re-launch your current website, business alignments or want to clear doubts regarding your user's needs?
-                    </p><!--end paragraph-->
+                    </h4><!--end paragraph-->
                     <h2>This is where Magic happens!</h2>
                     <div class="cta">
                         <a class="button" href="mailto:nikhilnairdesigns@gmail.com" class="--button CONTACT">SEND A MESSAGE</a>
                     </div>
                     <div class="social">
-                        <ul>
-                            <li>
                         <a href="https://www.behance.net/nikhilnair11" target="_blank">
                             <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 380 284" style="enable-background:new 0 0 380 284;" xml:space="preserve">
+	 viewBox="0 0 380 284" style="enable-background:new 0 0 380 284; width: 80pt; height: 80pt; margin-top: 20px;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
 	.st1{fill:#FFFFFF;}
@@ -308,21 +313,19 @@
 	<rect x="214.1" y="94.7" class="st6" width="43.2" height="12.9"/>
 </g>
 </svg>
-
                         </a>
-                    </li>
-                    <li>
                         <a href="https://dribbble.com/nix_11" target="_blank">
                             <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                            <svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                            <svg width="40pt" height="40pt" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" style="margin-bottom: 25px;" >
                                 <g>
                                     <path d="M128,8.5 C194,8.5 247.4,61.9 247.4,127.8 C247.4,193.7 194,247.2 128,247.2 C62,247.2 8.6,193.8 8.6,127.9 C8.6,62 62,8.5 128,8.5 L128,8.5 L128,8.5 Z" fill="#E74D89"></path>
                                     <path d="M128,255.7 C57.4,255.7 0,198.4 0,127.9 C0,57.3 57.4,0 128,0 C198.6,0 256,57.3 256,127.8 C256,198.3 198.6,255.7 128,255.7 L128,255.7 L128,255.7 Z M235.9,145.3 C232.2,144.1 202.1,135.2 167.8,140.6 C182.1,179.8 187.9,211.8 189,218.4 C213.6,201.9 231.1,175.7 235.9,145.3 L235.9,145.3 L235.9,145.3 Z M170.7,228.5 C169.1,218.9 162.7,185.5 147.4,145.7 C147.2,145.8 146.9,145.9 146.7,145.9 C85,167.4 62.9,210.1 60.9,214.1 C79.4,228.5 102.7,237.1 128,237.1 C143.1,237.2 157.6,234.1 170.7,228.5 L170.7,228.5 L170.7,228.5 Z M46.8,201 C49.3,196.8 79.3,147.2 135.7,128.9 C137.1,128.4 138.6,128 140,127.6 C137.3,121.4 134.3,115.2 131.1,109.1 C76.5,125.4 23.5,124.7 18.7,124.6 C18.7,125.7 18.6,126.8 18.6,127.9 C18.7,156 29.3,181.6 46.8,201 L46.8,201 L46.8,201 Z M21,105.6 C25.9,105.7 70.9,105.9 122.1,92.3 C104,60.1 84.4,33.1 81.6,29.2 C50.9,43.6 28.1,71.8 21,105.6 L21,105.6 L21,105.6 Z M102.4,21.8 C105.4,25.8 125.3,52.8 143.2,85.7 C182.1,71.1 198.5,49.1 200.5,46.3 C181.2,29.2 155.8,18.8 128,18.8 C119.2,18.8 110.6,19.9 102.4,21.8 L102.4,21.8 L102.4,21.8 Z M212.6,58.9 C210.3,62 192,85.5 151.6,102 C154.1,107.2 156.6,112.5 158.9,117.8 C159.7,119.7 160.5,121.6 161.3,123.4 C197.7,118.8 233.8,126.2 237.4,126.9 C237.1,101.2 227.9,77.5 212.6,58.9 L212.6,58.9 L212.6,58.9 Z" fill="#B2215A"></path>
                                 </g>
                             </svg>   
                         </a>
-                    </li>
-                    </ul>
+                        <a href="https://github.com/nixmojo11" target="_blank">
+                            <?xml version="1.0"?><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="65px" height="65px" style="margin-bottom: 20px; margin-left: 15px" >    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                        </a>
                     </div>
                     <p>Copyright Nikhil H Nair 2021</p>
                 </div>

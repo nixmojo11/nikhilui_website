@@ -1,6 +1,6 @@
 body{
     display: block;
-    box-sizing: content-box;
+    box-sizing: border-box;
     margin: 8px;
     font-size: 19px; /* Sets the font size to 19px */
     font-weight: 700; /*Sets the font weight to 700 */
@@ -12,12 +12,11 @@ header{
     margin: 0px;
    position: fixed;
    z-index: 99;
-   background-position: top;
    width: 100%;
    height: 160px;
    background: repeat;
    background-color: #f2f2f2;
-   padding: 0;
+   padding: 10px;
    display: block;
    top: 0px;
    clear: both;
@@ -81,6 +80,14 @@ h6{
 
 img { width: 100%; height: auto; margin: 20px 20px; display: block; }
 
+.main-container {
+    display: block;
+    max-width: 1500px;
+    padding: 0;
+    margin: 0 125px 0 125px;
+    box-sizing: border-box;
+    }
+
 .logo{
     max-width: 344px;
     padding-top: 10px;
@@ -89,19 +96,12 @@ img { width: 100%; height: auto; margin: 20px 20px; display: block; }
     margin-left: 20px;
 }
 
-.main-container {
-display: block;
-padding: 0 20px;
-margin: auto;
-align-items: center;
-    justify-items: center;
-}
-
 div { display: block;}
 
 .wrapper-3{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-column: 1/3;
     column-gap: 20px;
     row-gap: 1em;
 }
@@ -118,12 +118,18 @@ div { display: block;}
     margin-top: 200px;
     display: block;
     margin-left: auto;
-    margin-right: 80px;
+    margin-right: 60px;
+    padding-right: 10px;
 }
 
+.right_column{
+width: 30%; 
+margin-top: 210px; 
+margin-left: auto;
+padding-left: 20px;
+}
 
 .hero{
-    float: none;
     text-align: center;
     display: block;
     box-sizing: border-box;
@@ -138,9 +144,9 @@ div { display: block;}
 
 .pstar_2{
     float:right;
-    width: 5%;
+    width: 15%;
     height: auto;
-    margin-top: 140px;
+    margin-top: 20px;
     padding-top: 0px;
     margin-bottom: 0px;
     margin-right: 60px;
@@ -148,9 +154,9 @@ div { display: block;}
 }
 .pstar_1{
     float: left;
-    width: 5%;
+    width: 10%;
     height: auto;
-    margin-top: 65px;
+    margin-top: 20px;
     padding-top: 0px;
     margin-bottom: 0px;
     margin-left: 30px;
@@ -160,33 +166,37 @@ div { display: block;}
     float: left;
     width: 5%;
     height: auto;
-    margin-top: 35px;
-    padding-top: 10px;
+    margin-top: 15px;
+    padding-top: 5px;
     margin-bottom: 0px;
     margin-left: 30px;
 }
 
 .wrapper-2{
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 230px 1fr;
     grid-column: 1/3;
-    column-gap: 10px;
+    column-gap: 25px;
     row-gap: 2em;
-   margin: 5px;
+   margin: auto;
+   padding-left: 0px;
 }
 
 .explore{
-display: block;
-margin-top: 200px;
+margin-top: 120px;
 margin-bottom: 10px;
+margin-right: 0px;
+padding-left: 0px;
+margin-left: 0px;
+text-align: left;
 }
 
 .mockup_f{
-    display: block;
-    width: 110%;
+    width: 150%;
     height: auto;
     margin-top: 130px;
-    margin-right: 60px;
+    margin-left: 10px;
+    padding-left: 20px;
     margin-bottom: 5px;
 }
 
@@ -194,8 +204,8 @@ margin-bottom: 10px;
     float: none;
     width: 5%;
     height: auto;
-    margin-top: 10px;
-    padding-top: 5px;
+    margin-top: 5px;
+    padding-top: 0px;
     margin-bottom: 0px;
     margin-left: 90px;
 }
@@ -214,8 +224,6 @@ margin-bottom: 10px;
 
 .blink{
     margin-top: 0px;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 30px;
     animation: blink 3s infinite;
 }
 
@@ -232,7 +240,7 @@ margin-bottom: 10px;
     width: 10%;
     height: auto;
     margin-top: 70px;
-    margin-left: 90px;
+    margin-left: 40px;
     padding-right: 20px;
     margin-bottom: 0%;
     padding-top: 10px;
@@ -255,7 +263,7 @@ margin-bottom: 10px;
     width: 12%;
     height: auto;
     margin-top: 36px;
-    margin-right: 60px;
+    margin-right: 30px;
     margin-bottom: 0%;
     padding-top: 10px;
 }
@@ -264,7 +272,7 @@ margin-bottom: 10px;
     float: left;
     width: 10%;
     height: auto;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left: 5px;
     padding-left: 5px;
     padding-right: 0px;
@@ -274,7 +282,7 @@ margin-bottom: 10px;
 
 .magicgif{
     float: none;
-    width: 60%;
+    width: 80%;
     height: auto;
     top: 0px;
     margin-top: 0px;
@@ -308,7 +316,7 @@ transform: rotateZ(-30deg);
 
 .projects{
 margin-top: 150px;
-margin-bottom: 100px;
+margin-bottom: 60px;
 padding-top: 150px;
 padding-left: 30px;
 padding-right: 30px;
@@ -324,18 +332,19 @@ padding-right: 30px;
 }
 
 .recipeimage{
-    width: 650px;
-    height: 470px;
-    padding: 50px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
     margin-right: 0px;
+    border: 2px solid #fff;
 }
+
 .recipeinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 50px;
+    padding: 30px;
     color: #fff;
-    text-align: center;
 }
 
 .trail{
@@ -348,19 +357,19 @@ padding-right: 30px;
 }
 
 .trailimage{
-    width: 650px;
-    height: 470px;
-    padding: 50px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
     margin-right: 0px;
+    border: 2px solid #fff;
 }
 
 .trailinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 50px;
+    padding: 30px;
     color: #fff;
-    text-align: center;
 }
 
 .furnest{
@@ -373,19 +382,19 @@ padding-right: 30px;
 }
 
 .furnestimage{
-    width: 650px;
-    height: 470px;
-    padding: 50px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
     margin-right: 0px;
+    border: 2px solid #fff;
 }
 
 .furnestinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 50px;
+    padding: 30px;
     color: #fff;
-    text-align: center;
 }
 
 .prolific{
@@ -398,19 +407,19 @@ padding-right: 30px;
 }
 
 .prolificimage{
-    width: 650px;
-    height: 470px;
-    padding: 50px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
     margin-right: 0px;
+    border: 2px solid #fff;
 }
 
 .prolificinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 50px;
+    padding: 30px;
     color: #fff;
-    text-align: center;
 }
 
 .note{
@@ -423,19 +432,19 @@ padding-right: 30px;
 }
 
 .noteimage{
-    width: 650px;
-    height: 470px;
-    padding: 50px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
     margin-right: 0px;
+    border: 2px solid #fff;
 }
 
 .noteinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 50px;
+    padding: 30px;
     color: #fff;
-    text-align: center;
 }
 
 .chatbox{
@@ -448,26 +457,27 @@ padding-right: 30px;
 }
 
 .chatboximage{
-    width: 650px;
-    height: 470px;
-    padding: 50px;
+    width: 90%;
+    height: auto;
+    padding: 20px;
     margin-right: 0px;
+    border: 2px solid #fff;
 }
 
 .chatboxinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 50px;
+    padding: 30px;
     color: #fff;
     text-align: center;
 }
 
 .painting{
-    margin-top: 150px;
+ margin-top: 150px;
 padding-top: 50px;
-padding-left: 30px;
-padding-right: 30px;
+padding-left: 60px;
+padding-right: 60px;
 }
 
 .paint-wrapper{
@@ -475,6 +485,8 @@ padding-right: 30px;
     grid-template-columns: repeat(2,1fr);
     column-gap: 30px;
     row-gap: 1em;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .paintbutton{
@@ -499,21 +511,13 @@ padding-right: 30px;
     transition: 0.2s opacity;
 }
 
-.elephant{
-    width: 600px; 
-    height: 900px; 
-    float: left;
-}
-
-.turtle{
-    width: 80%; 
-    height: auto;
-    float: right; 
-    padding: 20px;
-}
-
 .about_me{
-    margin-top: 30px;
+margin-top: 30px;
+display: block;
+box-sizing: border-box;
+max-width: 1500px;
+padding: 0;
+margin: 0 125px 0 125px;
 }
 
 .aboutwrapper{
@@ -543,6 +547,16 @@ padding-right: 30px;
     align-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.aboutskills{
+    margin-top: 0px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column: 1/2;
+    column-gap: 40px;
+    row-gap: 2em; 
 }
 
 .field1{
@@ -602,9 +616,7 @@ padding-right: 30px;
     align-items: center;
 }
 
-.aboutskills{
-    margin-top: 0px;
-    padding: 15px;
+.painting_wrapper{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-column: 1/2;
@@ -636,7 +648,7 @@ padding-right: 30px;
     float: right;
     left: 0px;
     margin-top: 100px;
-    padding-top: 650px;
+    padding-top: 600px;
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 20px;
@@ -644,28 +656,32 @@ padding-right: 30px;
 
 .recipe-intro{
     margin-top: 100px;
-    padding-top: 900px;
+    padding-top: 750px;
+    margin-left: 30px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 80px;
     row-gap: 1em;
 }
 
+.recipe_role{
+    background-color: rgb(180 236 154/ 65%);
+}
+
 
 footer{
-    text-align: center;
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
     margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    background: repeat;
     background-color: #f2f2f2;
+    bottom: 0px;
 font-family: 'Nunito', sans-serif;
 }
 
 .footer-container{
-    padding: 0 20px;
+    padding: 0 120px 0 120px;
     box-sizing: border-box;
     display: block;
     text-align: center;
@@ -685,3 +701,113 @@ font-family: 'Nunito', sans-serif;
 .social > a {
     margin: 20px;
 }
+
+
+
+/* ==============================
+Small devices (320px and larger)
+================================= */
+@media only screen and (min-width: 320px) {
+
+    header{
+        height: auto;
+    }
+
+    .logo{
+        width: 50%;
+        height: auto;
+        padding-top: 10px;
+        display: block;
+        margin: 0 10px;
+    }
+
+
+    .main-container {
+        display: block;
+        max-width: 320px;
+        padding: 0;
+        margin: 0 18px 0 18px;
+        box-sizing: border-box;
+        }
+
+     .left_column{
+            margin-top: 150px;
+            margin-left: 5px;
+            padding-left: 5px;
+            padding-right: 10px;
+            width: 80%;
+            height: auto;
+        }
+
+        .center_column{
+            width: 130%;
+            margin-top: 140px;
+            display: block;
+            margin-left: auto;
+            margin-right: 90px;
+        }
+
+        .hero{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+  
+        
+
+ 
+  }
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+
+    .main-container {
+        display: block;
+        max-width: 640px;
+        padding: 0;
+        margin: 0 24px 0 24px;
+        box-sizing: border-box;
+        }
+        
+  }
+
+  /* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+
+    .main-container {
+        display: block;
+        max-width: 1024px;
+        padding: 0;
+        margin: 0 85px 0 85px;
+        box-sizing: border-box;
+        }
+}
+
+/* ==============================
+X-large devices (1200px or larger)
+================================= */
+@media only screen and (min-width: 1200px) {
+
+    header{
+        width: 100%;
+        height: 160px; 
+    }
+
+    .main-container {
+        display: block;
+        max-width: 1200px;
+        padding: 0;
+        margin: 0 100px 0 100px;
+        box-sizing: border-box;
+        }
+
+        .logo{
+            max-width: 344px;
+            padding-top: 10px;
+            display: block;
+            margin: 0 24px;
+            margin-left: 20px;
+        }

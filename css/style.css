@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     display: block;
     box-sizing: border-box;
-    margin: 8px;
+    margin: 16px;
     font-size: 19px; /* Sets the font size to 19px */
     font-weight: 700; /*Sets the font weight to 700 */
     line-height: 1.9; /* Sets the line-height to 1.9 * the font-size */
@@ -14,13 +18,13 @@ header{
    z-index: 99;
    width: 100%;
    height: 160px;
-   background: repeat;
    background-color: #f2f2f2;
    padding: 10px;
    display: block;
    top: 0px;
    clear: both;
    box-sizing: border-box;
+   text-align: center;
    font-family: 'Nunito',sans-serif;
    font-weight: 800;
    font-size: 19px;/* Sets the font size to 19px */
@@ -28,21 +32,30 @@ header{
    color: #425058;
    box-shadow: 0 16px 8px 0 rgb(66 80 88/ 19%);
    }
-    
 
-div.navtoggle {
-       position: absolute;
+   .logo{
+    max-width: 344px;
+    padding-top: 10px;
+    display: block;
+    margin: 0 24px;
+}
+
+   nav > ul {
+       list-style-type: none;
+       padding: 0;
    }
 
-main{
-display: block;
-box-sizing: border-box;
-background-color: #fff;
-font-family: 'Nunito',sans-serif;
-font-size: 19px;
-line-height: normal;
-color: #425058;
-}
+   nav > ul > li {
+       display: inline-block;
+   }
+
+   nav > ul > li a {
+       padding: 0 15px;
+       text-transform: uppercase;
+       font-weight: 800;
+       color: #425058;
+       text-decoration: none;
+   }
 
 h1,h2,h3,h4 {
     line-height: normal;
@@ -78,37 +91,50 @@ h6{
 }
 
 
-img { width: 100%; height: auto; margin: 20px 20px; display: block; }
+img { width: 100%; height: auto; display: block; margin: 0 auto;}
+
+main{
+    display: block;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-family: 'Nunito',sans-serif;
+    font-size: 19px;
+    line-height: normal;
+    color: #425058;
+    }
 
 .main-container {
     display: block;
-    max-width: 1500px;
-    padding: 0;
-    margin: 0 125px 0 125px;
+    max-width: 1200px;
     box-sizing: border-box;
     }
 
-.logo{
-    max-width: 344px;
-    padding-top: 10px;
-    display: block;
-    margin: 0 24px;
-    margin-left: 20px;
-}
+    .wrapper, .wrapper-2, .wrapper-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
 
-div { display: block;}
+    .envelop, .envelop-2, .envelop-3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
 
-.wrapper-3{
+.wrapper-stars{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column: 1/3;
     column-gap: 20px;
     row-gap: 1em;
+    box-sizing: border-box;
 }
 
 .left_column{
     margin-top: 210px;
-    margin-left: 30px;
     width: 60%;
     height: auto;
 }
@@ -117,9 +143,7 @@ div { display: block;}
     width: 110%;
     margin-top: 200px;
     display: block;
-    margin-left: auto;
-    margin-right: 60px;
-    padding-right: 10px;
+    
 }
 
 .right_column{
@@ -142,24 +166,8 @@ padding-left: 20px;
     padding-right: 10px;
 }
 
-.pstar_2{
-    float:right;
-    width: 15%;
-    height: auto;
-    margin-top: 20px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 60px;
-    margin-left: 0px;
-}
-.pstar_1{
-    float: left;
-    width: 10%;
-    height: auto;
-    margin-top: 20px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 30px;
+.pstar_2, .pstar_2{
+    display: none;
 }
 
 .pstar_4{
@@ -172,34 +180,6 @@ padding-left: 20px;
     margin-left: 30px;
 }
 
-.wrapper-2{
-    display: grid;
-    grid-template-columns: 230px 1fr;
-    grid-column: 1/3;
-    column-gap: 25px;
-    row-gap: 2em;
-   margin: auto;
-   padding-left: 0px;
-}
-
-.explore{
-margin-top: 120px;
-margin-bottom: 10px;
-margin-right: 0px;
-padding-left: 0px;
-margin-left: 0px;
-text-align: left;
-}
-
-.mockup_f{
-    width: 150%;
-    height: auto;
-    margin-top: 130px;
-    margin-left: 10px;
-    padding-left: 20px;
-    margin-bottom: 5px;
-}
-
 .pstar_3{
     float: none;
     width: 5%;
@@ -208,18 +188,6 @@ text-align: left;
     padding-top: 0px;
     margin-bottom: 0px;
     margin-left: 90px;
-}
-
-.quote{
-    text-align: center;
-    display: block;
-    box-sizing: border-box;
-    margin-top: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .blink{
@@ -320,173 +288,58 @@ margin-bottom: 60px;
 padding-top: 150px;
 padding-left: 30px;
 padding-right: 30px;
+border-bottom: 80px;
+ padding-bottom: 30px;
 }
 
-.recipe{
+.grey-bg{
     background-color: #425058;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-    row-gap: 1em;
-    margin-bottom: 80px;
+    padding: 30px;
+    margin-bottom: 50px;
 }
 
-.recipeimage{
-    width: 90%;
-    height: auto;
-    padding: 20px;
-    margin-right: 0px;
-    border: 2px solid #fff;
-}
 
 .recipeinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 30px;
     color: #fff;
-}
-
-.trail{
-    background-color: #425058;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-    row-gap: 1em;
-    margin-bottom: 80px;
-}
-
-.trailimage{
-    width: 90%;
-    height: auto;
-    padding: 20px;
-    margin-right: 0px;
-    border: 2px solid #fff;
 }
 
 .trailinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 30px;
     color: #fff;
-}
-
-.furnest{
-    background-color: #425058;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-    row-gap: 1em;
-    margin-bottom: 80px;
-}
-
-.furnestimage{
-    width: 90%;
-    height: auto;
-    padding: 20px;
-    margin-right: 0px;
-    border: 2px solid #fff;
 }
 
 .furnestinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 30px;
     color: #fff;
-}
-
-.prolific{
-    background-color: #425058;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-    row-gap: 1em;
-    margin-bottom: 80px;
-}
-
-.prolificimage{
-    width: 90%;
-    height: auto;
-    padding: 20px;
-    margin-right: 0px;
-    border: 2px solid #fff;
 }
 
 .prolificinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 30px;
     color: #fff;
-}
-
-.note{
-    background-color: #425058;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-    row-gap: 1em;
-    margin-bottom: 80px;
-}
-
-.noteimage{
-    width: 90%;
-    height: auto;
-    padding: 20px;
-    margin-right: 0px;
-    border: 2px solid #fff;
 }
 
 .noteinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 30px;
     color: #fff;
-}
-
-.chatbox{
-    background-color: #425058;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 10px;
-    row-gap: 1em;
-    margin-bottom: 80px;
-}
-
-.chatboximage{
-    width: 90%;
-    height: auto;
-    padding: 20px;
-    margin-right: 0px;
-    border: 2px solid #fff;
 }
 
 .chatboxinfo{
     text-align: center;
     display: block;
     box-sizing: content-box;
-    padding: 30px;
     color: #fff;
     text-align: center;
-}
-
-.painting{
- margin-top: 150px;
-padding-top: 50px;
-padding-left: 60px;
-padding-right: 60px;
-}
-
-.paint-wrapper{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    column-gap: 30px;
-    row-gap: 1em;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 .paintbutton{
@@ -503,34 +356,18 @@ padding-right: 60px;
     background-color: #425058;
     color: #fff;
     font-style: normal;
+    font-size: 17px;
     text-emphasis: none;
     text-decoration: none;
     font-weight: bold;
     padding: 20px;
-    border-radius: 1px;
+    border-radius: 2px;
     transition: 0.2s opacity;
 }
 
-.about_me{
-margin-top: 30px;
-display: block;
-box-sizing: border-box;
-max-width: 1500px;
-padding: 0;
-margin: 0 125px 0 125px;
-}
-
-.aboutwrapper{
-    margin-top: 40px;
-    padding-top: 40px;
-    margin-left: 20px;
-    display: grid;
-    grid-template-columns: 500px 1fr;
-    grid-column: 1/3;
-    column-gap: 60px;
-    row-gap: 2em;
-   margin: 5px;
-}
+/* ==============================
+About Me
+================================= */
 
 .myprofile{
     border: 3px solid #425058; 
@@ -542,7 +379,8 @@ margin: 0 125px 0 125px;
 
 .aboutinfo{
     padding: 50px;
-    display: inline-block;
+    display: block;
+    box-sizing: border-box;
     text-align: left;
     align-content: center;
     margin-left: auto;
@@ -560,43 +398,46 @@ margin: 0 125px 0 125px;
 }
 
 .field1{
-    width: 40%;
+    width: 50%;
     height: auto;
     display: block;
     padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .field_wrapper{
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-column: 1/2;
-    column-gap: 40px;
+    column-gap: 5px;
     row-gap: 2em; 
-    margin-left: 60px;
+    margin-left: auto;
 }
 
 .field4{
-    width: 38%;
+    width: 45%;
     height: auto;
     display: block;
     padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .field5{
-    width: 38%;
+    width: 45%;
     height: auto;
     display: block;
     padding-bottom: 10px;
     left: 0px;
     float: right;
-    margin-right: 90px;
-    margin-bottom: 80px;
+    margin-right: 10px;
+    margin-bottom: 50px;
 }
 
 .cv_button{
@@ -604,28 +445,26 @@ margin: 0 125px 0 125px;
     background-color: #425058;
     color: #fff;
     font-style: normal;
+    font-size: 17px;
     text-emphasis: none;
     text-decoration: none;
     font-weight: bold;
     padding: 20px;
     border-radius: 1px;
     transition: 0.2s opacity;
-    margin-top: 250px;
+    margin-top: 0px;
     margin-left: 45%;
     margin-right: -50%;
     align-items: center;
 }
 
-.painting_wrapper{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-column: 1/2;
-    column-gap: 40px;
-    row-gap: 2em; 
-}
+/* ==============================
+Project 1 Fettle Relish
+================================= */
 
 .title{
     position: relative;
+    padding-bottom: 480px;
 }
 
 .imagefr1{
@@ -647,25 +486,123 @@ margin: 0 125px 0 125px;
     width: 24%;
     float: right;
     left: 0px;
-    margin-top: 100px;
-    padding-top: 600px;
+    margin-top: 80px;
+    padding-top: 800px;
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 20px;
 }
 
 .recipe-intro{
-    margin-top: 100px;
+    margin-top: 400px;
     padding-top: 750px;
-    margin-left: 30px;
+    margin-left: 45%;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    column-gap: 80px;
+    column-gap: 40px;
     row-gap: 1em;
 }
 
 .recipe_role{
     background-color: rgb(180 236 154/ 65%);
+    padding: 15px;
+    border-radius: 19px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.Recipetool{
+    padding: 0px;
+    margin-left: 0px;
+    width: 60%;
+}
+
+.Process{
+    padding: 30px;
+}
+
+.green-bg{
+    background-color: rgb(180 236 154/ 65%);
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 19px;
+}
+
+.Recipe_wf{
+    position: relative;
+    padding-bottom: 2580px;
+}
+
+.wf_bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.wf_info{
+    position: absolute;
+    padding-left: 5px;
+    top: 100px;
+    left: 50px;
+    z-index: 3;
+}
+
+/* ==============================
+Project 2 TrailHigh
+================================= */
+
+
+.light-bg{
+    background-color: #c4cac1;
+    padding: 20px;
+    margin-bottom: 50px;
+    border-radius: 19px;
+}
+
+
+/* ==============================
+Project 3 Furnest
+================================= */
+
+.pink-bg{
+    background-color: rgb(223 161 161/ 47%);
+    padding: 10px;
+    color: #61548d;
+}
+
+/* ==============================
+Project 5 JotItDown
+================================= */
+
+.textcolumn-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   column-gap: 5px;
+}
+
+.textcolumn-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
+/* ==============================
+Project 6 Chatbox
+================================= */
+
+.chatbox_video{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: rgb(246 93 7/ 38%);
 }
 
 
@@ -702,15 +639,30 @@ font-family: 'Nunito', sans-serif;
     margin: 20px;
 }
 
-
+/*----------------------------------------------------------*/
 
 /* ==============================
 Small devices (320px and larger)
 ================================= */
 @media only screen and (min-width: 320px) {
 
+    * {
+        box-sizing: border-box;
+    }
+
+    body{
+        display: block;
+        box-sizing: border-box;
+        margin: 16px;
+        font-size: 15px; /* Sets the font size to 15px */
+        font-weight: 700; /*Sets the font weight to 700 */
+        line-height: 1.2; /* Sets the line-height to 1.2 * the font-size */
+    }
+    
     header{
         height: auto;
+        font-size: 15px;
+        font-weight: 800;
     }
 
     .logo{
@@ -721,12 +673,51 @@ Small devices (320px and larger)
         margin: 0 10px;
     }
 
+h1{
+    font-size: 32px;
+    font-weight: 800;
+    color: #425058;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+h2{
+    font-size: 28px;
+    font-weight: 800;
+    color: #425058;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+h6{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 15px;
+}
+
+
+main{
+    display: block;
+    box-sizing: border-box;
+    align-content: center;
+}
 
     .main-container {
         display: block;
-        max-width: 320px;
-        padding: 0;
-        margin: 0 18px 0 18px;
+        max-width: 310px;
+        padding: 0 ;
+        margin: 0 auto;
         box-sizing: border-box;
         }
 
@@ -751,58 +742,1033 @@ Small devices (320px and larger)
             padding-left: 0px;
             padding-right: 0px;
         }
-  
-        
 
- 
+        .explore{
+            margin-left: 5%;
+            text-align: center;
+            }
+
+        .pstar_1, .pstar_2 {
+            display: none;
+        }
+
+        .magic-quote{
+            font-family:'Poppins',sans-serif;
+            font-size: 18px;
+            color: #586469;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .projects{
+            text-align: left;
+            margin-left: auto;
+            padding-left: 0px;
+            margin-top: 25px;
+            padding-top: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+
+        .grey-bg{
+            padding: 15px;
+        }
+
+        .wrapper-2 {
+            row-gap: 25px;
+          }
+
+        .recipeimage{
+            padding-top: 10px;
+        }  
+
+        .trailimage{
+            padding-top: 10px;
+        }
+
+        .furnestimage{
+            padding-top: 10px;
+        }
+
+        .prolificimage{
+            padding-top: 10px;
+        }
+
+        .noteimage{
+            padding-top: 10px;
+        }
+
+        .chatboximage{
+            padding-top: 10px;
+        }
+
+        .paintbutton{
+            display: inline-block;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            margin-left: 30%;
+            margin-right: auto;
+            align-items: center;
+        }
+
+        .button{
+            font-size: 15px;
+        }
+
+/* ==============================
+About Me (320px and larger)
+================================= */
+
+        .aboutinfo{
+            margin-top: 20px;
+            padding: 5px;
+            display: inline-block;
+    box-sizing: border-box;
+    text-align: left;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+        }
+
+        .field1{
+            width: 65%;
+            height: auto;
+            display: block;
+            padding-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .field_wrapper{
+            width: 115%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-column: 1/2;
+            column-gap: 5px;
+            row-gap: 2em; 
+            margin-left: auto;
+            margin-bottom: 10px;
+        }
+        
+        .field4{
+            width: 60%;
+            height: auto;
+            display: block;
+            padding-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .field5{
+            width:60%;
+            height: auto;
+            display: block;
+            padding-bottom: 10px;
+            left: 0px;
+            float: right;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cv_button{
+            margin-top: 40px;
+            margin-left: 20%;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 15px;
+        }
+
+/* ==============================
+Project 1 Fettle Relish (320px and larger)
+================================= */
+
+.title{
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.imagefr1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.imagefr2{
+    position: absolute;
+    padding-left: 5px;
+    top: 20px;
+    left: 10px;
+    z-index: 3;
+}
+
+.leaves{
+    width: 24%;
+    float: right;
+    left: 0px;
+    margin-top: 80px;
+    padding-top: 80px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.recipeintro-images{
+   display: none;
+}
+
+.recipe-intro{
+    margin-top: 120px;
+    padding-top: 80px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 80px;
+    row-gap: 1em;
+}
+
+.recipe_role{
+    background-color: rgb(180 236 154/ 65%);
+    padding: 10px;
+}
+
+.Recipetool{
+    margin-top: 20px;
+    width: 60%;
+}
+
+.Process{
+    padding: 10px;
+}
+
+.Recipe_wf{
+    position: relative;
+    padding-bottom: 820px;
+}
+
+.wf_bg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.wf_info{
+    position: absolute;
+    padding-left: 0px;
+    top: 10px;
+    left: 50px;
+    z-index: 3;
+}
+
+.decorator{
+    width: 60%;
+}
+
+
+
+ /* ==============================
+Project 6 Chatbox (320px and larger)
+================================= */
+
+.chatbox_video{
+    padding: 10px;
+    padding-left: 15%;
+}
+
+        footer{
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 0px;
+            padding-top: 0px;
+            background: repeat;
+            background-color: #f2f2f2;
+            bottom: 0px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 15px;
+        }
+
+.footer-container{
+    margin: 0px;
+    padding: 0 2px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+
+.cta{
+    margin: 5px 0 5px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.social{
+    box-sizing: border-box;
+    display: block;
+}
+
+.social > a {
+    margin: 5px;
+}
+  
   }
+
+/*----------------------------------------------------------*/
 
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
 
+    * {
+        box-sizing: border-box;
+    }
+
+    body{
+        display: block;
+        box-sizing: border-box;
+        margin: 16px;
+        font-size: 15px; /* Sets the font size to 15px */
+        font-weight: 700; /*Sets the font weight to 700 */
+        line-height: 1.2; /* Sets the line-height to 1.2 * the font-size */
+    }
+    
+    header{
+        height: auto;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .logo{
+        width: 50%;
+        height: auto;
+        padding-top: 10px;
+        display: block;
+        margin: 0 10px;
+    }
+
+h1{
+    font-size: 40px;
+    font-weight: 800;
+    color: #425058;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: 800;
+    color: #425058;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+h6{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 17px;
+}
+
+main{
+    display: block;
+    box-sizing: border-box;
+    align-content: center;
+}
+
     .main-container {
         display: block;
         max-width: 640px;
         padding: 0;
-        margin: 0 24px 0 24px;
+        margin: 0 auto;
         box-sizing: border-box;
         }
+
+     .left_column{
+        margin-top: 150px;
+        margin-left: 5px;
+        padding-left: 5px;
+        padding-right: 10px;
+        width: 80%;
+        height: auto;
+    }
+
+    .center_column{
+        width: 130%;
+        margin-top: 140px;
+        display: block;
+        margin-left: auto;
+        margin-right: 90px;
+    }
+
+    .hero{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .explore{
+        margin-left: 40px;
+        }
+
+        .magic-quote{
+            font-family:'Poppins',sans-serif;
+            font-size: 19px;
+            color: #586469;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
         
+        .projects{
+            text-align: left;
+            margin-left: auto;
+            padding-left: 0px;
+            margin-top: 35px;
+            padding-top: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+
+        .grey-bg{
+            padding: 20px;
+        }
+
+        .wrapper-2 {
+            row-gap: 25px;
+          }
+
+        .recipeimage{
+            padding-top: 10px;
+            width: 100%;
+        }  
+
+        .trailimage{
+            padding-top: 10px;
+        }
+
+        .furnestimage{
+            padding-top: 10px;
+        }
+
+        .prolificimage{
+            padding-top: 10px;
+        }
+
+        .noteimage{
+            padding-top: 10px;
+        }
+
+        .chatboximage{
+            padding-top: 10px;
+        }
+
+        .paintbutton{
+            display: inline-block;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 45%;
+            margin-right: auto;
+            align-items: center;
   }
+
+  /* ==============================
+About Me (640px and larger)
+================================= */
+
+  .field1{
+    width: 55%;
+    height: auto;
+    display: block;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.field_wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column: 1/2;
+    column-gap: 5px;
+    row-gap: 2em; 
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+.field4{
+    width: 50%;
+    height: auto;
+    display: block;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.field5{
+    width:50%;
+    height: auto;
+    display: block;
+    padding-bottom: 10px;
+    left: 0px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.cv_button{
+    margin-top: 40px;
+    margin-left: 30%;
+margin-right: auto;
+align-items: center;
+margin-bottom: 15px;
+}
+
+/* ==============================
+Project 1 Fettle Relish (320px and larger)
+================================= */
+
+.title{
+    position: relative;
+    padding-bottom: 190px;
+}
+
+.imagefr1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.imagefr2{
+    position: absolute;
+    padding-left: 5px;
+    top: 20px;
+    left: 10px;
+    z-index: 3;
+}
+
+.leaves{
+    width: 24%;
+    float: right;
+    left: 0px;
+    margin-top: 80px;
+    padding-top: 80px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.recipeintro-images{
+   display: none;
+}
+
+.recipe-intro{
+    margin-top: 200px;
+    padding-top: 80px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 80px;
+    row-gap: 1em;
+}
+
+.recipe_role{
+    background-color: rgb(180 236 154/ 65%);
+   padding: 15px; 
+}
+
+.Recipetool{
+    margin-top: 5px;
+}
+
+.Recipe_wf{
+    position: relative;
+    padding-bottom: 1520px;
+}
+
+ /* ==============================
+Project 2 TrailHigh (640px and larger)
+================================= */
+
+.light-bg{
+    padding: 30px;
+}
+
+ /* ==============================
+Project 6 Chatbox (640px and larger)
+================================= */
+
+.chatbox_video{
+    padding: 15px;
+    padding-left: 15%;
+}
+
+  footer{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0px;
+    padding-top: 0px;
+    background: repeat;
+    background-color: #f2f2f2;
+    bottom: 0px;
+font-family: 'Nunito', sans-serif;
+font-size: 17px;
+}
+
+.footer-container{
+padding: 0 10px;
+box-sizing: border-box;
+display: block;
+text-align: center;
+}
+
+.cta{
+margin: 5px 0 5px;
+box-sizing: border-box;
+display: block;
+}
+
+.social{
+box-sizing: border-box;
+display: block;
+}
+
+.social > a {
+margin: 5px;
+}
+
+}
+
+/*----------------------------------------------------------*/
 
   /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 
-    .main-container {
-        display: block;
-        max-width: 1024px;
-        padding: 0;
-        margin: 0 85px 0 85px;
+    * {
         box-sizing: border-box;
+    }
+
+    body{
+        display: block;
+        box-sizing: border-box;
+        margin: 16px;
+        font-size: 19px; /* Sets the font size to 19px */
+        font-weight: 700; /*Sets the font weight to 700 */
+        line-height: 1.9; /* Sets the line-height to 1.9 * the font-size */
+    }
+
+
+    header{
+        font-size: 19px;
+        font-weight: 800;
+    }
+
+        h1{
+            font-size: 60px;
+            font-weight: 800;
+            color: #425058;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
         }
+        
+        h2{
+            font-size: 2.21em;
+            font-weight: 800;
+            color: #425058;
+        }
+        
+        h3{
+            font-size: 2em;
+            font-weight: 700;
+        }
+        
+        h4{
+            font-size: 1.52em;
+            font-weight: 800;
+        }
+        
+        h6{
+            font-size: 1.26em;
+            font-weight: 700;
+        }
+
+        p{
+            font-size: 19px;
+        }
+
+        main{
+            display: block;
+            box-sizing: border-box;
+            align-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        .main-container {
+            display: block;
+            max-width: 1024px;
+            padding: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-size: 19px;
+            }
+
+        .wrapper-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+           column-gap: 30px;
+            row-gap: 20px;
+          }
+          
+          
+          .wrapper-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+          column-gap: 20px;
+            row-gap: 15px;
+          }
+
+          .envelop-2{
+              display: grid;
+              grid-template-columns: 400px 1fr;
+              grid-area: 1/3 ;
+              column-gap: 20px;
+              row-gap: 50px;
+          }
+          
+            
+
+.explore{
+    position: relative;
+    float: left;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    padding-left: 60px;
+    margin-left: 60px;
+    text-align: center;
+    }
+    
+
+.pstar_2{
+    position: absolute;
+    float:left;
+    width: 15%;
+    height: auto;
+    margin-top: 20px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
+.pstar_1{
+    position: absolute;
+    float: left;
+    width: 20%;
+    height: auto;
+    margin-top: 20px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+    .mockup_f{
+        float: left;
+        width: 110%;
+        height: auto;
+        margin-top: 50px;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-bottom: 5px;
+        padding-right: 40px;
+        margin-right: 80px;
+    }
+
+    .quote{
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .projects{
+        margin-top: 150px;
+        margin-bottom: 60px;
+        padding-top: 150px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-bottom: 80px;
+         padding-bottom: 30px;
+        }
+
+        .grey-bg{
+            padding: 10px;
+        }
+
+        .paintbutton{
+            display: inline-block;
+            margin-top: 30px;
+            margin-bottom: 80px;
+            margin-left: 45%;
+            margin-right: auto;
+            align-items: center;
+        }
+
+ /* ==============================
+About Me (1024px and larger)
+================================= */
+
+.aboutinfo{
+    margin-top: 20px;
+    padding: 20px;
+    display: inline-block;
+box-sizing: border-box;
+text-align: left;
+align-content: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+.field1{
+    width: 45%;
+    height: auto;
+    display: block;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.field_wrapper{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column: 1/2;
+    column-gap: 5px;
+    row-gap: 2em; 
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+.field4{
+    width: 40%;
+    height: auto;
+    display: block;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.field5{
+    width: 40%;
+    height: auto;
+    display: block;
+    padding-bottom: 10px;
+    left: 0px;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.cv_button{
+    margin-top: 40px;
+    margin-left: 42%;
+margin-right: auto;
+align-items: center;
+margin-bottom: 15px;
+}
+
+ /* ==============================
+Project 1 Fettle Relish (1200px and larger)
+================================= */
+
+.title{
+    position: relative;
+    padding-bottom: 400px;
+}
+
+.imagefr1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.imagefr2{
+    position: absolute;
+    padding-left: 5px;
+    top: 40px;
+    left: 50px;
+    z-index: 3;
+}
+
+.leaves{
+    width: 24%;
+    float: right;
+    left: 0px;
+    margin-top: 60px;
+    padding-top: 100px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.recipeintro-images{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.recipe-intro{
+    margin-top: 130px;
+    padding-top: 250px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 60px;
+    row-gap: 1em;
+}
+
+.recipe_role{
+    background-color: rgb(180 236 154/ 65%);
+    padding: 30px;
+} 
+
+.recipetool{
+    margin-left: 10px;
+    width: 20%;
+}
+
+.Process{
+    padding: 50px;
+}
+
+.Recipe_wf{
+    position: relative;
+    padding-bottom: 1980px;
+}
+
+.mu{
+    width: 120%;
+}
+
+.decorator{
+    width: 80%;
+}
+
+ /* ==============================
+Project 2 TrailHigh (640px and larger)
+================================= */
+
+.light-bg{
+    padding: 50px;
+}
+
+ /* ==============================
+Project 6 Chatbox (1024px and larger)
+================================= */
+
+.chatbox_video{
+    padding: 20px;
+    padding-left: 15%;
+}
+
+
+        footer{
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 85px;
+            padding-top: 0px;
+            background: repeat;
+            background-color: #f2f2f2;
+            bottom: 0px;
+        font-family: 'Nunito', sans-serif;
+        }
+
+.footer-container{
+    padding: 0 60px 0 60px;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+
+.cta{
+    margin: 30px 0 30px;
+    box-sizing: border-box;
+    display: block;
+}
+
+.social{
+    box-sizing: border-box;
+    display: block;
+}
+
+.social > a {
+    margin: 20px;
+}
+  
+  }
+    
+/*----------------------------------------------------------*/
 
 /* ==============================
 X-large devices (1200px or larger)
 ================================= */
 @media only screen and (min-width: 1200px) {
 
+    * {
+        box-sizing: border-box;
+    }
+    
+    body{
+        display: block;
+        box-sizing: border-box;
+        margin: 16px;
+        font-size: 19px; /* Sets the font size to 19px */
+        font-weight: 700; /*Sets the font weight to 700 */
+        line-height: 1.9; /* Sets the line-height to 1.9 * the font-size */
+        -webkit-text-size-adjust: 100%;
+    }
+
     header{
         width: 100%;
         height: 160px; 
+        font-size: 19px;
+        font-weight: 800;
     }
-
-    .main-container {
-        display: block;
-        max-width: 1200px;
-        padding: 0;
-        margin: 0 100px 0 100px;
-        box-sizing: border-box;
-        }
 
         .logo{
             max-width: 344px;
@@ -811,3 +1777,237 @@ X-large devices (1200px or larger)
             margin: 0 24px;
             margin-left: 20px;
         }
+
+        h1{
+            font-size: 60px;
+            font-weight: 800;
+            color: #425058;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+        }
+        
+        h2{
+            font-size: 2.21em;
+            font-weight: 800;
+            color: #425058;
+        }
+        
+        h3{
+            font-size: 2em;
+            font-weight: 700;
+        }
+        
+        h4{
+            font-size: 1.52em;
+            font-weight: 800;
+        }
+        
+        h6{
+            font-size: 1.26em;
+            font-weight: 700;
+        }
+
+        p{
+            font-size: 19px;
+        }
+
+        .main-container {
+            display: block;
+            max-width: 1200px;
+            padding: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+            }
+
+.pstar_2{
+    float:left;
+    width: 15%;
+    height: auto;
+    margin-top: 20px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 60px;
+    margin-left: 0px;
+}
+
+.pstar_1{
+    float: left;
+    width: 10%;
+    height: auto;
+    margin-top: 20px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+.wrapper-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   column-gap: 40px;
+    row-gap: 15px;
+  }
+  
+  
+  .wrapper-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+    row-gap: 15px;
+  }
+
+  .envelop-2{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-area: 1/3 ;
+    column-gap: 40px;
+    row-gap: 50px;
+}
+
+
+.explore{
+    float: right;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    padding-left: 80px;
+    margin-left: 80px;
+    text-align: center;
+    }
+    
+    .mockup_f{
+        float: left;
+        width: 90%;
+        height: auto;
+        margin-top: 50px;
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-bottom: 5px;
+        padding-right: 40px;
+        margin-right: 180px;
+    }
+
+    .quote{
+        text-align: center;
+        display: block;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .projects{
+        margin-top: 150px;
+        margin-bottom: 60px;
+        padding-top: 150px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-bottom: 80px;
+         padding-bottom: 30px;
+        }
+        
+        .grey-bg{
+            padding: 15px;
+        }
+
+        .paintbutton{
+            display: inline-block;
+            margin-top: 30px;
+            margin-bottom: 80px;
+            margin-left: 45%;
+            margin-right: auto;
+            align-items: center;
+        }
+
+ /* ==============================
+About Me (1200px and larger)
+================================= */
+
+        .cv_button{
+            margin-top: 30px;
+            margin-left: 45%;
+            margin-bottom: 30px;
+        }
+
+ /* ==============================
+Project 1 Fettle Relish (1200px and larger)
+================================= */
+
+.title{
+    position: relative;
+    padding-bottom: 480px;
+}
+
+.imagefr1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.imagefr2{
+    position: absolute;
+    padding-left: 5px;
+    top: 40px;
+    left: 50px;
+    z-index: 3;
+}
+
+.leaves{
+    width: 24%;
+    float: right;
+    left: 0px;
+    margin-top: 80px;
+    padding-top: 130px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.recipeintro-images{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.recipe-intro{
+    margin-top: 200px;
+    padding-top: 250px;
+    margin-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 40px;
+    row-gap: 1em;
+}
+
+.recipe_role{
+    padding: 30px;
+}
+
+.Recipe_wf{
+    position: relative;
+    padding-bottom: 2720px;
+}
+
+ /* ==============================
+Project 2 TrailHigh (1200px and larger)
+================================= */
+
+.light-bg{
+    padding: 70px;
+}
+    
+
+/* ==============================
+Project 6 Chatbox (1200px and larger)
+================================= */
+
+.chatbox_video{
+    padding: 20px;
+    padding-left: 15%;
+}
+
+
+    }

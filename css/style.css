@@ -51,8 +51,10 @@ ul {
     padding-inline-start: 40px;
 }
 
-.navtoggle li:not(:last-child) {
-    display: none;
+nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navtoggle, .navtoggle.responsive {
@@ -60,11 +62,16 @@ ul {
 
 }
 
+.navtoggle li:not(:last-child) {
+    display: none;
+}
+
 .navtoggle li .icon{
     position: absolute;
     right: 42px;
     bottom: 10px;
    z-index: 99;
+   font-size: 19px;
    padding-top: 0px;
    padding-right: 0px;
 }
@@ -75,26 +82,52 @@ ul {
     color: #425058;
 }
 
+.navtoggle.responsive nav{
+    padding: 24px 0 0;
+}
+
+.navtoggle.responsive li {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(88, 100, 105, 0.3) ;
+}
+
 .navtoggle.responsive li > a, .navtoggle li > a {
     padding: 0 15px;
     text-transform: uppercase;
     font-weight: 800;
 }
 
-   nav > ul {
-       list-style-type: none;
-       padding: 0;
-       margin: 0;
-   }
+.navtoggle.responsive li:nth-last-child(2) {
+    border-bottom: 0 solid transparent;
+    margin-bottom: 10px;
+}
 
-   nav > ul > li a {
-       padding: 0 15px;
-       text-transform: uppercase;
-       font-weight: 800;
-       color: #425058;
-       text-decoration: none;
-   }
+.navtoggle.responsive li:last-child {
+    padding: 0;
+    border-bottom: none;
+}
 
+.navtoggle.responsive li > a, .navtoggle li > a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #425058;
+    text-decoration: none;
+}
+
+.navtoggle.responsive li > a:visited{
+    color: #586469;
+}
+
+.navtoggle.responsive li > a:hover,.navtoggle.responsive li > a:focus {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.navtoggle.responsive li > a:active{
+    color: #586469;
+}
 
 h1,h2,h3,h4 {
     line-height: normal;
@@ -722,9 +755,84 @@ Small devices (320px and larger)
         margin: 0 10px;
     }
 
-    .navtoggle li {
-        font-size: 15px;
+    nav > ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
+    
+    .navtoggle, .navtoggle.responsive {
+        position:relative;
+    
+    }
+    
+    .navtoggle li:not(:last-child) {
+        display: none;
+    }
+    
+    .navtoggle li .icon{
+        position: absolute;
+        right: 42px;
+        bottom: 20px;
+       z-index: 99;
+       font-size: 45px;
+       padding-top: 0px;
+       padding-right: 0px;
+    }
+    
+    .icon{
+        width: 42px;
+        height: 42px;
+        color: #425058;
+    }
+    
+    .navtoggle.responsive nav{
+        padding: 24px 0 0;
+    }
+    
+    .navtoggle.responsive li {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(88, 100, 105, 0.3) ;
+    }
+    
+    .navtoggle.responsive li > a, .navtoggle li > a {
+        padding: 0 15px;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    
+    .navtoggle.responsive li:nth-last-child(2) {
+        border-bottom: 0 solid transparent;
+        margin-bottom: 10px;
+    }
+    
+    .navtoggle.responsive li:last-child {
+        padding: 0;
+        border-bottom: none;
+    }
+    
+    .navtoggle.responsive li > a, .navtoggle li > a {
+        padding: 0 15px;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #425058;
+        text-decoration: none;
+    }
+    
+    .navtoggle.responsive li > a:visited{
+        color: #586469;
+    }
+    
+    .navtoggle.responsive li > a:hover,.navtoggle.responsive li > a:focus {
+        opacity: 0.8;
+        text-decoration: none;
+    }
+    
+    .navtoggle.responsive li > a:active{
+        color: #586469;
+    }
+    
 
 h1{
     font-size: 32px;
@@ -1098,35 +1206,40 @@ Medium devices (640px and larger)
     }
     
     header{
-        height: auto;
+        height: 120px;
         font-size: 15px;
         font-weight: 800;
+        text-align: unset;
+        margin-bottom: 10px;
     }
-
-    .logo{
-        width: 50%;
-        height: auto;
-        padding-top: 10px;
-        display: block;
-        margin: 0 10px;
-    }
-
    
-.navtoggle li:not(:last-child) {
-    display: none;
-}
-
-.navtoggle, .navtoggle.responsive {
-    position:relative;
-}
-
-.navtoggle li .icon{
+.navtoggle, .navtoggle.responsive{
     position: absolute;
-    right: 74px;
-    bottom: 38px;
-   z-index: 99;
-   padding-top: 0px;
-   padding-right: 0px;
+    right: 0;
+    top: 45px;
+    margin-right: 40px;
+}
+
+.navtoggle.responsive > nav {
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+.navtoggle.responsive li {
+    display: block;
+    padding: 0;
+    border-bottom: none;
+}
+
+.navtoggle li:not(:last-child) {
+    display: inline-block;
+}
+
+.navtoggle li:last-child {
+    display: none;
 }
 
 .icon{
@@ -1136,20 +1249,15 @@ Medium devices (640px and larger)
   
 }
 
-   
-nav > ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 1em 0;
+
+   .logo{
+    width: 24%;
+    height: auto;
+    padding-top: 10px;
+    display: block;
+    margin: 0 10px;
 }
 
-   nav > ul > li a {
-       padding: 0 15px;
-       text-transform: uppercase;
-       font-weight: 800;
-       color: #425058;
-       text-decoration: none;
-   }
 
 h1{
     font-size: 40px;
@@ -1213,6 +1321,10 @@ main{
         display: block;
         margin-left: auto;
         margin-right: 90px;
+    }
+
+    .right_column{
+        margin-top: 150px;
     }
 
     .hero{
@@ -1342,7 +1454,7 @@ margin-bottom: 15px;
 }
 
 /* ==============================
-Project 1 Fettle Relish (320px and larger)
+Project 1 Fettle Relish (640px and larger)
 ================================= */
 
 .title{
@@ -1494,6 +1606,13 @@ Large devices (1024px or larger)
 
     nav > ul > li {
         display: inline-block;
+    }
+
+    .navtoggle, .navtoggle.responsive{
+        position: absolute;
+        right: 0;
+        top: 50px;
+        margin-right: 40px;
     }
 
         h1{
@@ -1798,7 +1917,7 @@ Project 1 Fettle Relish (1200px and larger)
 }
 
  /* ==============================
-Project 2 TrailHigh (640px and larger)
+Project 2 TrailHigh (1024px and larger)
 ================================= */
 
 .light-bg{
@@ -1898,6 +2017,14 @@ X-large devices (1200px or larger)
         nav > ul > li {
             display: inline-block;
         }
+
+        .navtoggle, .navtoggle.responsive{
+            position: absolute;
+            right: 0;
+            top: 65px;
+            margin-right: 60px;
+        }
+    
 
         h1{
             font-size: 60px;

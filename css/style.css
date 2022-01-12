@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
         box-sizing: border-box;
     }
@@ -13,34 +17,31 @@
     }
     
     header{
-        margin: 0px;
-        position: fixed;
-        z-index: 99;
-        width: 100%;
-        height: 110px;
         background-color: #f2f2f2;
         padding: 0;
-        padding-left: 0px;
-        display: block;
+        -webkit-box-shadow: 2px 3px 11px 0px rgba(88, 100, 105, 0.38);
+        -moz-box-shadow:2px 3px 11px 0px rgba(88, 100, 105, 0.38);
+        box-shadow: 2px 3px 11px 0px rgb(88 100 105/ 38%);
+        position: fixed;
         top: 0;
         right: 0;
-        clear: both;
+        width: 100%;
+        z-index: 99;
         box-sizing: border-box;
-        font-family: 'Nunito', sans-serif;
-        font-size: 15px;/* Sets the font size to 15px */
+        font-family: 'Nunito',sans-serif;
         font-weight: 800;
+        font-size: 19px;/* Sets the font size to 19px */
         line-height: normal;
         color: #425058;
-        box-shadow: 2px 3px 11px 0px rgb(88 100 105/ 38%);
-        -webkit-box-shadow: 2px 3px 11px 0px rgba(88, 100, 105, 0.38)
     }
 
     .logo{
-        width: 50%;
+        width: 49%;
         height: auto;
         padding-top: 15px;
         display: block;
-        margin: 0 10px;
+        margin: 0;
+        margin-left: 10px;
         margin-right: auto;
         float: left;
     }
@@ -48,12 +49,14 @@
     nav > ul {
         list-style-type: none;
         padding: 0;
+        padding-top: 66px;
         margin: 0;
         }
         
         nav > ul > li > a {
         padding: 0 15px;
-        color: #000000;
+        color: #425058;
+        text-decoration: none;
         }
         
         .navtoggle, .navtoggle.responsive {
@@ -66,9 +69,9 @@
         
         .navtoggle li .icon {
         position: absolute;
-        right: 0;
-        top: 2px;
-        font-size: 20px;
+        right: 42px;
+        top: 30px;
+        font-size: 24px;
         padding-right: 0;
         }
         
@@ -79,7 +82,13 @@
         .navtoggle.responsive li {
         display: block;
         padding: 20px ;
+        border-bottom: 1px solid rgba(88, 100, 105, 0.38);
         }
+
+        .navtoggle.responsive li:nth-last-child(2) {
+            border-bottom: 0 solid transparent;
+            margin-bottom: 5px;
+          }
 
         .navtoggle.responsive li > a:visited{
             color: #586469;
@@ -363,6 +372,12 @@
                 margin-bottom: 50px;
             }
 
+            .projecttitles{
+                margin-top: 5px;
+                text-decoration: underline white; 
+                text-underline-offset: 5px;
+            }
+
 
         .wrapper-2 {
             row-gap: 25px;
@@ -443,6 +458,12 @@
             margin-left: 30%;
             margin-right: auto;
             align-items: center;
+            transition-duration: 0.2s;
+            transition-property: opacity;
+        }
+
+        .paintbutton:hover, .paintbutton:focus{
+            opacity: 0.8;
         }
 
         .button{
@@ -460,7 +481,7 @@
             transition-property: opacity;
         }
         
-        .button:hover{
+        .button:hover,.button:focus{
             opacity: 0.8;
         }
 
@@ -559,7 +580,7 @@ About Me
             transition: 0.2s opacity;
         }
         
-        .cv_button:hover{
+        .cv_button:hover,.cv_button:focus{
             opacity: 0.8;
         }
 
@@ -578,6 +599,10 @@ Project 1 Fettle Relish
 .title{
     position: relative;
     padding-bottom: 5px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 100px; 
+    padding-top: 20px;
 }
 
 .imagefr1{
@@ -597,14 +622,15 @@ Project 1 Fettle Relish
 
 
 .leaves{
-    width: 24%;
+    width: 19%;
     float: right;
     left: 0px;
-    margin-top: 80px;
-    padding-top: 80px;
-    margin-right: 0px;
+    margin-top: 105px;
+    padding-top: 65px;
+    margin-right: 29px;
     margin-left: 0px;
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 
 .recipeintro-images{
@@ -659,7 +685,14 @@ Project 1 Fettle Relish
     padding-left: 0px;
     top: 10px;
     left: 50px;
+    margin-bottom: 100px;
     z-index: 3;
+}
+
+.Recipe-video{
+    margin-left: 3%;
+    width: 280px;
+    height: 245px;
 }
 
 .decorator{
@@ -691,16 +724,15 @@ Project 3 Furnest
 Project 6 Chatbox
 ================================= */
 
-.chatbox_video{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    padding-left: 15%;
-    padding-right: auto;
-    background-color: rgb(246 93 7/ 38%);
+.Worktitle{
+    margin-top: 100px;
+}
+
+.Chatbox-video{
+    margin-left: 5%;
+    margin-top: 0px;
+    width: 280px;
+    height: 245px;
 }
 
 footer{
@@ -731,12 +763,13 @@ font-size: 15px;
 }
 
 .social{
+    margin-top: 25px;
     box-sizing: border-box;
     display: block;
 }
 
 .social > a {
-    margin: 5px;
+    margin: 20px;
 }
   
 
@@ -765,18 +798,19 @@ Medium devices (640px and larger)
         font-size: 15px;
         font-weight: 800;
         text-align: unset;
-        margin-bottom: 20px 0 13px;
+        margin: 0px 0 10px;
     }
 
     nav {
         width: auto;
         float: right;
-        margin-top: 32px;
-        margin-right: 8px;
+        margin-top: 1px;
+        margin-right: 16px;
     }
 
     nav > ul {
-        margin: 1em 0;
+        margin: 0px 0;
+        padding-top: 50px;
     }
    
 .navtoggle, .navtoggle.responsive{
@@ -793,7 +827,7 @@ nav > ul > li {
 
 .navtoggle.responsive li {
     display: block;
-    padding: 0px 0;
+    padding: 20px 0;
     border-bottom: none;
 }
 
@@ -1042,7 +1076,7 @@ Project 1 Fettle Relish (640px and larger)
     left: 0px;
     margin-top: 80px;
     padding-top: 80px;
-    margin-right: 0px;
+    margin-right: 50px;
     margin-left: 0px;
     margin-bottom: 20px;
 }
@@ -1071,6 +1105,12 @@ Project 1 Fettle Relish (640px and larger)
     padding-bottom: 1520px;
 }
 
+.Recipe-video{
+    margin-left: 14%;
+    width: 520px;
+    height: 455px;
+}
+
  /* ==============================
 Project 2 TrailHigh (640px and larger)
 ================================= */
@@ -1083,9 +1123,15 @@ Project 2 TrailHigh (640px and larger)
 Project 6 Chatbox (640px and larger)
 ================================= */
 
-.chatbox_video{
-    padding: 15px;
-    padding-left: 15%;
+.Worktitle{
+    margin-top: 140px;
+}
+
+.Chatbox-video{
+    margin-left: 10%;
+    margin-top: 0px;
+    width: 520px;
+    height: 455px;
 }
 
   footer{
@@ -1115,12 +1161,13 @@ display: block;
 }
 
 .social{
-box-sizing: border-box;
-display: block;
+    margin-top: 25px;
+    box-sizing: border-box;
+    display: block;
 }
 
 .social > a {
-margin: 5px;
+    margin: 20px;
 }
 
 }
@@ -1152,13 +1199,13 @@ Large devices (1024px or larger)
     }
 
     .logo{
-        padding-top: 16px;
+        padding-top: 15px;
     }
 
     nav {
         width: auto;
         float: right;
-        margin-top: 30px;
+        margin-top: 0px;
         margin-right: 16px;
     }
 
@@ -1168,6 +1215,10 @@ Large devices (1024px or larger)
 
     .navtoggle li:last-child{
         display: none;
+    }
+
+    nav > ul {
+        padding-top: 50px;
     }
 
     nav > ul > li {
@@ -1398,7 +1449,7 @@ margin-right: auto;
 }
 
 .cv_button{
-    margin-top: 40px;
+    margin-top: 80px;
     margin-left: 42%;
 margin-right: auto;
 align-items: center;
@@ -1433,7 +1484,7 @@ Project 1 Fettle Relish (1024px and larger)
     width: 24%;
     float: right;
     left: 0px;
-    margin-top: 60px;
+    margin-top: 70px;
     padding-top: 100px;
     margin-right: 0px;
     margin-left: 0px;
@@ -1474,6 +1525,12 @@ Project 1 Fettle Relish (1024px and larger)
     width: 120%;
 }
 
+.Recipe-video{
+    margin-left: 3%;
+    width: 800px;
+    height: 700px;
+}
+
 .decorator{
     width: 80%;
 }
@@ -1507,11 +1564,15 @@ Project 5 JotItDown (1024 and larger)
 Project 6 Chatbox (1024px and larger)
 ================================= */
 
-.chatbox_video{
-    padding: 20px;
-    padding-left: 15%;
+.Worktitle{
+    margin-top: 140px;
 }
 
+.Chatbox-video{
+    margin-left: 8%;
+    width: 800px;
+    height: 700px;
+}
 
         footer{
             display: inline-block;
@@ -1539,6 +1600,7 @@ Project 6 Chatbox (1024px and larger)
 }
 
 .social{
+    margin-top: 25px;
     box-sizing: border-box;
     display: block;
 }
@@ -1593,8 +1655,8 @@ X-large devices (1200px or larger)
     nav {
         width: auto;
         float: right;
-        margin-top: 38px;
-        margin-right: 24px;
+        margin-top: 0px;
+        margin-right: 32px;
     }
     
 
@@ -1887,7 +1949,7 @@ About Me (1200px and larger)
 }
 
         .cv_button{
-            margin-top: 30px;
+            margin-top: 150px;
             margin-left: 45%;
             margin-bottom: 30px;
             margin-right: -50%;
@@ -1921,7 +1983,7 @@ Project 1 Fettle Relish (1200px and larger)
     width: 24%;
     float: right;
     left: 0px;
-    margin-top: 80px;
+    margin-top: 90px;
     padding-top: 130px;
     margin-right: 0px;
     margin-left: 0px;
@@ -1985,6 +2047,12 @@ Project 1 Fettle Relish (1200px and larger)
     padding-bottom: 2720px;
 }
 
+.Recipe-video{
+    margin-left: 5%;
+    width: 1000px;
+    height: 875px;
+}
+
  /* ==============================
 Project 2 TrailHigh (1200px and larger)
 ================================= */
@@ -2015,9 +2083,13 @@ Project 5 JotItDown (1200 and larger)
 Project 6 Chatbox (1200px and larger)
 ================================= */
 
-.chatbox_video{
-    padding: 20px;
-    padding-left: 15%;
+.Worktitle{
+    margin-top: 180px;
+}
+
+.Chatbox-video{
+    width: 1000px;
+    height: 875px;
 }
 
 footer{
@@ -2047,6 +2119,7 @@ font-size: 15px;
 }
 
 .social{
+    margin-top: 25px;
     box-sizing: border-box;
     display: block;
 }
